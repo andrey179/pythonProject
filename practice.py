@@ -4,7 +4,7 @@ from openpyxl.chart import BarChart, Reference
 
 def process_workbook():
     wb = xl.load_workbook('transactions.xlsx')
-    sheet = wb['Sheet1']
+    sheet = wb['Sheet']
     cell = sheet['a1']
 
     for row in range(3, sheet.max_row + 1):
