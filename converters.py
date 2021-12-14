@@ -1,9 +1,7 @@
-def find_max(numbers):
-    max = numbers[0]
-    for number in numbers:
-        if number > max:
-            max = number
-    return max
+import os
 
-
-
+ping = os.system('ping 15.55.5.56')
+if ping == 0:
+    print('Taken')
+else:
+    print('Available')
