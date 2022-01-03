@@ -1,5 +1,5 @@
 import pywhatkit
+import openexcel
 
 
-
-pywhatkit.sendwhatmsg("+972533309789" , "Hello David Ha hatigh", 10, 39)
+pywhatkit.sendwhatmsg("+972" +  , "Hello David Ha hatigh", 11, 58)
