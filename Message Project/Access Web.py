@@ -1,5 +1,8 @@
 import pywhatkit
-import openexcel
+from openxl2 import DataComponents
 
-
-pywhatkit.sendwhatmsg("+972" +  , "Hello David Ha hatigh", 11, 58)
+if __name__ == '__main__':
+    pywhatkit.sendwhatmsg(DataComponents.get_phone,
+                          DataComponents.get_message,
+                          DataComponents.get_hours,
+                          DataComponents.get_minutes)
