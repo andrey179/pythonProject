@@ -1,28 +1,21 @@
 from datetime import datetime
 import openpyxl as xl
 
+
 def main():
     wb = xl.load_workbook('PhoneData.xlsx')
     sheet = wb['Sheet1']
-    # open workbook
-    for row in range(2, sheet.max_row + 1):
 
-        cell = sheet.cell(row, 2)
-        phone_num = "+972"
-        phone_num += str(cell.value)
-        print(phone_num)
+    date = str(sheet.cell(2, 4).value)
+    correct_date = date[0:10]
+    print(correct_date)
 
-        cell = sheet.cell(row, 3)
-        message = cell.value
-        print(message)
-
-        last_sent = sheet.cell(row, 6)
-        print_date = f"{datetime.now().day}/{datetime.now().month}-{datetime.now().hour}:{datetime.now().minute}"
-        last_sent.value = print_date
-        print(last_sent.value)
-
-    # save
-    wb.save('PhoneData.xlsx')
+    today_date = f"{datetime.now().year}-0{datetime.now().month}-0{datetime.now().day}"
+    print(today_date)
+    if today_date == correct_date:
+        print(True)
+    else:
+        print(False)
 
 
 if __name__ == '__main__':
